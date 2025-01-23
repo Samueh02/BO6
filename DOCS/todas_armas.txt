@@ -1,0 +1,51 @@
+esto son todas las armas:
+
+Fusiles de Asalto
+XM4
+AK-74
+AMES 85
+GPR 91
+Model L
+Goblin MK 2
+AS VAL
+Krig c(arma extra, del pase de batalla)
+Subfusiles
+C9
+KSV
+Tanto .22
+PP-919
+Jackal PDW
+Kompakt 92
+saug(arma extra, del pase de batalla)
+Escopetas
+Marine SP
+ASG-89
+maelstrom(arma extra, del pase de batalla)
+Ametralladoras ligeras
+PU-21
+XMG
+GPMG-7
+Fusiles tácticos
+Swat 5.56
+
+Tsarkov 7.62
+AEK-973
+DM-10
+Fusiles de precisión
+LW3A1 Frostline
+SVD
+LR 7.62
+amr mod 4(arma extra, del pase de batalla)
+Pistolas
+9mm PM
+Grekhova
+GS45
+Stryder .22
+Lanzadores
+Cigma 2B
+HE-1
+Cuerpo a cuerpo
+Cuchillo
+Bate de béisbol
+macheta(arma extra, del pase de batalla)
+taladro electrico(arma extra, del pase de batalla)
