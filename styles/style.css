@@ -7,16 +7,24 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     background-color: #222;
     color: white;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 1rem 0 0 0;
     display: flex;
     justify-content: center;
 }
@@ -26,20 +34,33 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #FFA500;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
 main {
     padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 900px;
 }
 
+/* Welcome Section */
 #welcome {
     text-align: center;
     margin-bottom: 2rem;
 }
 
+/* Categories Section */
 #categories {
     display: flex;
     flex-wrap: wrap;
@@ -49,24 +70,106 @@ main {
 
 .categories-list .category {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid #FFA500;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 200px;
     padding: 1rem;
     text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categories-list .category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .categories-list .category a {
     text-decoration: none;
-    color: #333;
+    color: #222;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
+/* Footer */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Page Header for Weapon Details */
+.page-header {
+    background-color: #222;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Main Content for Weapon Details */
+.content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #FFA500;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.3rem;
+}
+
+/* Challenge List */
+.challenge-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.challenge-list li {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.challenge-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #FFA500;
+}
+
+/* Links for Navigation */
+.nav a {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
 }

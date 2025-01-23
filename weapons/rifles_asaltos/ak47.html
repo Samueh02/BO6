@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del AK-74</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Detalles del AK-74</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../categories/assault_rifles.html">Fusiles de Asalto</a></li>
+                <li><a href="../dashboard.html">Mi Progreso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="weapon-details">
+            <h2>Desafíos para el AK-74</h2>
+            <h3>Headshots</h3>
+            <ul>
+                <li><input type="checkbox" id="ak74-granite" onchange="saveProgress('ak74-granite')"> Granite: 5 Headshots</li>
+                <li><input type="checkbox" id="ak74-woodland" onchange="saveProgress('ak74-woodland')"> Woodland: 10 Headshots</li>
+                <li><input type="checkbox" id="ak74-savanna" onchange="saveProgress('ak74-savanna')"> Savanna: 15 Headshots</li>
+                <li><input type="checkbox" id="ak74-splinter" onchange="saveProgress('ak74-splinter')"> Splinter: 20 Headshots</li>
+                <li><input type="checkbox" id="ak74-moss" onchange="saveProgress('ak74-moss')"> Moss: 30 Headshots</li>
+                <li><input type="checkbox" id="ak74-saboteur" onchange="saveProgress('ak74-saboteur')"> Saboteur: 40 Headshots</li>
+                <li><input type="checkbox" id="ak74-digital" onchange="saveProgress('ak74-digital')"> Digital: 50 Headshots</li>
+                <li><input type="checkbox" id="ak74-tide" onchange="saveProgress('ak74-tide')"> Tide: 75 Headshots</li>
+                <li><input type="checkbox" id="ak74-red-tiger" onchange="saveProgress('ak74-red-tiger')"> Red Tiger: 100 Headshots</li>
+            </ul>
+
+            <h3>Desafíos Especiales</h3>
+            <ul>
+                <li><input type="checkbox" id="ak74-strategist" onchange="saveProgress('ak74-strategist')"> 50 kills with the strategist combat specialty active</li>
+                <li><input type="checkbox" id="ak74-grenade-launcher" onchange="saveProgress('ak74-grenade-launcher')"> 20 kills with the underbarrel grenade launcher</li>
+            </ul>
+
+            <h3>Desafíos de Maestría</h3>
+            <ul>
+                <li><input type="checkbox" id="ak74-gold" onchange="saveProgress('ak74-gold')"> Oro: 10 double kills</li>
+                <li><input type="checkbox" id="ak74-diamond" onchange="saveProgress('ak74-diamond')"> Diamante: 3 kills without dying 10 times</li>
+                <li><input type="checkbox" id="ak74-dark-spine" onchange="saveProgress('ak74-dark-spine')"> Espina Oscura: 3 triple kills</li>
+                <li><input type="checkbox" id="ak74-dark-matter" onchange="saveProgress('ak74-dark-matter')"> Materia Oscura: 5 kills without dying</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Camo Tracker | Creado por Samueh02</p>
+    </footer>
+
+    <script>
+        // Function to save progress to localStorage
+        function saveProgress(id) {
+            const isChecked = document.getElementById(id).checked;
+            localStorage.setItem(id, isChecked);
+        }
+
+        // Function to load progress from localStorage
+        function loadProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const id = checkbox.id;
+                const isChecked = localStorage.getItem(id) === 'true';
+                checkbox.checked = isChecked;
+            });
+        }
+
+        // Load progress on page load
+        window.onload = loadProgress;
+    </script>
+</body>
+</html>

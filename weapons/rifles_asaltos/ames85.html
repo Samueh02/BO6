@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del AMES 85</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Detalles del AMES 85</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../categories/assault_rifles.html">Fusiles de Asalto</a></li>
+                <li><a href="../dashboard.html">Mi Progreso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="weapon-details">
+            <h2>Desafíos para el AMES 85</h2>
+            <h3>Headshots</h3>
+            <ul>
+                <li><input type="checkbox" id="ames85-granite" onchange="saveProgress('ames85-granite')"> Granite: 5 Headshots</li>
+                <li><input type="checkbox" id="ames85-woodland" onchange="saveProgress('ames85-woodland')"> Woodland: 10 Headshots</li>
+                <li><input type="checkbox" id="ames85-savanna" onchange="saveProgress('ames85-savanna')"> Savanna: 15 Headshots</li>
+                <li><input type="checkbox" id="ames85-splinter" onchange="saveProgress('ames85-splinter')"> Splinter: 20 Headshots</li>
+                <li><input type="checkbox" id="ames85-moss" onchange="saveProgress('ames85-moss')"> Moss: 30 Headshots</li>
+                <li><input type="checkbox" id="ames85-saboteur" onchange="saveProgress('ames85-saboteur')"> Saboteur: 40 Headshots</li>
+                <li><input type="checkbox" id="ames85-digital" onchange="saveProgress('ames85-digital')"> Digital: 50 Headshots</li>
+                <li><input type="checkbox" id="ames85-tide" onchange="saveProgress('ames85-tide')"> Tide: 75 Headshots</li>
+                <li><input type="checkbox" id="ames85-red-tiger" onchange="saveProgress('ames85-red-tiger')"> Red Tiger: 100 Headshots</li>
+            </ul>
+
+            <h3>Desafíos Especiales</h3>
+            <ul>
+                <li><input type="checkbox" id="ames85-prone-kills" onchange="saveProgress('ames85-prone-kills')"> 30 kills while prone</li>
+                <li><input type="checkbox" id="ames85-long-range" onchange="saveProgress('ames85-long-range')"> 25 long-range kills</li>
+            </ul>
+
+            <h3>Desafíos de Maestría</h3>
+            <ul>
+                <li><input type="checkbox" id="ames85-gold" onchange="saveProgress('ames85-gold')"> Oro: 10 double kills</li>
+                <li><input type="checkbox" id="ames85-diamond" onchange="saveProgress('ames85-diamond')"> Diamante: 3 kills without dying 10 times</li>
+                <li><input type="checkbox" id="ames85-dark-spine" onchange="saveProgress('ames85-dark-spine')"> Espina Oscura: 3 triple kills</li>
+                <li><input type="checkbox" id="ames85-dark-matter" onchange="saveProgress('ames85-dark-matter')"> Materia Oscura: 5 kills without dying</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Camo Tracker | Creado por Samueh02</p>
+    </footer>
+
+    <script>
+        // Function to save progress to localStorage
+        function saveProgress(id) {
+            const isChecked = document.getElementById(id).checked;
+            localStorage.setItem(id, isChecked);
+        }
+
+        // Function to load progress from localStorage
+        function loadProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const id = checkbox.id;
+                const isChecked = localStorage.getItem(id) === 'true';
+                checkbox.checked = isChecked;
+            });
+        }
+
+        // Load progress on page load
+        window.onload = loadProgress;
+    </script>
+</body>
+</html>

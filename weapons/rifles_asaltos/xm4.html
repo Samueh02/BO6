@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del XM4</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <h1>Detalles del XM4</h1>
+        <nav>
+            <ul class="nav">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="../../../categories/assault_rifles.html">Fusiles de Asalto</a></li>
+                <li><a href="../../../dashboard.html">Mi Progreso</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section id="weapon-details">
+            <h2>Desafíos para el XM4</h2>
+
+            <h3 class="section-title">Headshots</h3>
+            <ul class="challenge-list">
+                <li><input type="checkbox" id="xm4-granite" onchange="saveProgress('xm4-granite')"> Granite: 5 Headshots</li>
+                <li><input type="checkbox" id="xm4-woodland" onchange="saveProgress('xm4-woodland')"> Woodland: 10 Headshots</li>
+                <li><input type="checkbox" id="xm4-savanna" onchange="saveProgress('xm4-savanna')"> Savanna: 15 Headshots</li>
+                <li><input type="checkbox" id="xm4-splinter" onchange="saveProgress('xm4-splinter')"> Splinter: 20 Headshots</li>
+                <li><input type="checkbox" id="xm4-moss" onchange="saveProgress('xm4-moss')"> Moss: 30 Headshots</li>
+                <li><input type="checkbox" id="xm4-saboteur" onchange="saveProgress('xm4-saboteur')"> Saboteur: 40 Headshots</li>
+                <li><input type="checkbox" id="xm4-digital" onchange="saveProgress('xm4-digital')"> Digital: 50 Headshots</li>
+                <li><input type="checkbox" id="xm4-tide" onchange="saveProgress('xm4-tide')"> Tide: 75 Headshots</li>
+                <li><input type="checkbox" id="xm4-red-tiger" onchange="saveProgress('xm4-red-tiger')"> Red Tiger: 100 Headshots</li>
+            </ul>
+
+            <h3 class="section-title">Desafíos Especiales</h3>
+            <ul class="challenge-list">
+                <li><input type="checkbox" id="xm4-sprint-kills" onchange="saveProgress('xm4-sprint-kills')"> 30 kills shortly after sprinting</li>
+                <li><input type="checkbox" id="xm4-damage-kills" onchange="saveProgress('xm4-damage-kills')"> 30 kills without taking damage</li>
+            </ul>
+
+            <h3 class="section-title">Desafíos de Maestría</h3>
+            <ul class="challenge-list">
+                <li><input type="checkbox" id="xm4-gold" onchange="saveProgress('xm4-gold')"> Oro: 10 double kills</li>
+                <li><input type="checkbox" id="xm4-diamond" onchange="saveProgress('xm4-diamond')"> Diamante: 3 kills without dying 10 times</li>
+                <li><input type="checkbox" id="xm4-dark-spine" onchange="saveProgress('xm4-dark-spine')"> Espina Oscura: 3 triple kills</li>
+                <li><input type="checkbox" id="xm4-dark-matter" onchange="saveProgress('xm4-dark-matter')"> Materia Oscura: 5 kills without dying</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <p>&copy; 2025 Camo Tracker | Creado por Samueh02</p>
+    </footer>
+
+    <script>
+        // Function to save progress to localStorage
+        function saveProgress(id) {
+            const isChecked = document.getElementById(id).checked;
+            localStorage.setItem(id, isChecked);
+        }
+
+        // Function to load progress from localStorage
+        function loadProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const id = checkbox.id;
+                const isChecked = localStorage.getItem(id) === 'true';
+                checkbox.checked = isChecked;
+            });
+        }
+
+        // Load progress on page load
+        window.onload = loadProgress;
+    </script>
+</body>
+</html>
