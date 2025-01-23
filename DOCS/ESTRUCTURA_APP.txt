@@ -1,0 +1,53 @@
+Estructura Final
+1. Página principal (index.html)
+    -Diseño general:
+        Bienvenida e información breve sobre los camuflajes y progresos.
+        Opciones de login/registro para que los usuarios accedan a su progreso.
+        Gráfica o barra de progreso general (Oro, Diamante, Espina Oscura, Materia Oscura).
+        Botones o tarjetas grandes para cada categoría (Fusiles de Asalto, Subfusiles, etc.).
+2. Página de categorías
+    -Información visual:
+        Tabla o grilla con todas las armas de la categoría.
+    -Cada arma tendrá:
+        Nombre.
+        Estado general (color según progreso).
+        Botón para "ver detalles".
+        Opciones para filtrar y ordenar armas (por nombre, progreso, etc.).
+3. Página de detalle de cada arma
+    -Progreso de los desafíos:
+    -Imagen grande del arma.
+    -Lista completa de los desafíos (Multiplayer):
+    -Checkbox para marcar desafíos completados.
+    -Barra de progreso general de la arma.
+    -Botón para regresar a la categoría.
+4. Dashboard del usuario
+    -Cada usuario verá:
+        Su progreso total (resumen de todas las categorías).
+        Un botón para cada categoría (como atajo).
+        Su historial o ajustes, si aplica.
+
+
+Características Técnicas
+Frontend (HTML, CSS, JavaScript):
+
+HTML: Para estructurar las páginas.
+CSS: Para hacerlas visualmente atractivas (usando colores de progreso: azul, rojo, naranja, morado).
+JavaScript: Para la interacción (guardar progreso, marcar desafíos completados, mostrar gráficos dinámicos).
+Backend (para usuarios y datos):
+Node.js + Express (u otro framework): Para manejar usuarios y guardar el progreso.
+Base de datos (opción ligera):
+JSON: Si es algo simple/local.
+MongoDB/MySQL: Si planeas algo más grande.
+Autenticación de usuarios:
+Sistema de registro/login.
+Almacén del progreso de cada usuario.
+Opciones sin servidor:
+
+
+
+Flujo del Usuario
+    El usuario se registra/inicia sesión.
+    Accede a su dashboard personal, donde ve un resumen de su progreso.
+    Navega a una categoría (ej., Fusiles de Asalto) y ve todas las armas con su progreso.
+    Al seleccionar un arma, puede ver los desafíos específicos y marcarlos como completados.
+    Los datos se guardan automáticamente (en la base de datos o localStorage).
